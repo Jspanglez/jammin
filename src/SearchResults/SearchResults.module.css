@@ -1,0 +1,11 @@
+.searchResultsDiv {
+  background-color: rgba(137, 43, 226, 0.475);
+  padding: 20px;
+  color: #ffbb00;
+  height: 35rem;
+  overflow-y: scroll;
+}
+
+.searchResultsDiv h1 {
+  margin-top: 15px;
+}
