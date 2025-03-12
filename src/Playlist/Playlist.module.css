@@ -1,0 +1,28 @@
+.playlistContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+  background-color: rgba(137, 43, 226, 0.475);
+}
+
+.playlistName {
+  background-color: rgba(55, 6, 100, 0.9);
+  border-radius: 0;
+  border-bottom: 2px solid #ffbb00;
+  color: #ffbb00;
+}
+
+.playlistName::placeholder {
+  color: #ffffff5e;
+}
+
+.saveButton {
+  width: 275px;
+  background-color: #ffbb00;
+}
+
+.saveButton:hover {
+  color: rgb(97, 33, 157);
+}
