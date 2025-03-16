@@ -2,27 +2,26 @@ import React, { useState } from "react";
 import styles from './Tracklist.module.css'
 import Track from '../Track/Track'
 
-const songs = [
-  {
-    name: 'Not Like Us',
-    artist: 'Kendrick Lamar'
-  },
-  {
-    name: 'Gangnam Style',
-    artist: 'Psy'
-  },
-  {
-    name: 'Mr. Blue Sky',
-    artist: 'Electric Light Orchestra'
-  }
-]
 
-function Tracklist() {
-  const songContainer = songs.map((song, index) => (
-    <Track key={index} name={song.name} artist={song.artist} />
-  ));
+function Tracklist(props) {
+  if (props.searchClicked && (!props.songs || props.songs.length === 0)) {
+    return <h2>No results found</h2>
+  }
+
+  const songContainer = props.songs.map((song, index) => (
+    <Track 
+    key={index} 
+    id={index} 
+    name={song.name} 
+    artist={song.artist} 
+    album={song.album}
+    uri={song.uri}
+    addTrackToPlaylist={props.addTrackToPlaylist}/>
+  ))
   return (
-    songContainer
+    <div>
+      {songContainer}
+    </div>
   )
 }
 
