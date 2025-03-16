@@ -1,7 +1,8 @@
 .searchResultsDiv {
   background-color: rgba(137, 43, 226, 0.475);
-  padding: 20px;
+  padding: 20px 40px;
   color: #ffbb00;
+  width: 50rem;
   height: 35rem;
   overflow-y: scroll;
   scrollbar-width: none;
