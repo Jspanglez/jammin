@@ -11,11 +11,21 @@ function App() {
   return (
     <div className='appContainer'>
       <header>Jammin'</header>
-      <SearchBar placeHolder="Enter a song..."/>
-      <Button text={<> Search <FontAwesomeIcon icon={faMagnifyingGlass} className='icon'/></>} />
+      <SearchBar 
+      placeHolder="Enter a song or artist..."
+      value={songName}
+      inputHandler={updateSong}
+      onKeyDown={handleKeyDown}/>
+      <Button 
+      text={<> Search <FontAwesomeIcon icon={faMagnifyingGlass} className='icon'/></>} 
+      handleFunction={filterSongs} />
       <div className='bottomContainer'>
-        <SearchResults />
-        <Playlist />
+        <SearchResults addTrackToPlaylist={addTrackToPlaylist} 
+        songs={searchClicked ? filteredSongs : []}
+        searchClicked={searchClicked}/>
+        <Playlist playlist={playlist} removeTrackFromPlaylist={removeTrackFromPlaylist}
+        savePlaylist={savePlaylist}
+        updatePlaylistName={setPlaylistName}/>
       </div>
     </div>
   )
