@@ -6,6 +6,9 @@ function SearchBar(props) {
     <input 
     type="text" 
     placeholder={props.placeHolder}
+    value={props.value}
+    onChange={props.inputHandler}
+    onKeyDown={props.onKeyDown}
     className={`${styles.searchBar} ${props.className}`}/>
   )
 }
