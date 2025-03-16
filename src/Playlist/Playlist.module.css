@@ -28,4 +28,23 @@
 
 .saveButton:hover {
   color: rgb(97, 33, 157);
+
+.removeButton {
+  width: 30px;
+  height: 30px;
+  font-size: 3rem;
+  padding-bottom: 12px;
+  border-radius: 50%;
+  background-color: #ffbb00;
+  color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  transition: 0.3s;
+}
+
+.removeButton:hover {
+  color: blueviolet;
+  box-shadow: 0 0 20px #ffbb00;
 }
