@@ -1,9 +1,12 @@
 .playlistContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 40px;
-  gap: 40px;
+  gap: 5px;
+  width: 50rem;
+  height: 32.5rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
   background-color: rgba(137, 43, 226, 0.475);
   backdrop-filter: blur(5px);
   border-radius: 20px;
@@ -11,10 +14,12 @@
 }
 
 .playlistName {
+  width: 47rem;
   background-color: rgba(55, 6, 100, 0.9);
   border-radius: 0;
   border-bottom: 2px solid #ffbb00;
   color: #ffbb00;
+  flex-shrink: 0;
 }
 
 .playlistName::placeholder {
@@ -23,11 +28,22 @@
 
 .saveButton {
   width: 275px;
+  color: rgb(97, 33, 157);
   background-color: #ffbb00;
+  align-self: center;
+  margin-top: 20px;
+  flex-shrink: 0;
+  transition: 0.3s;
 }
 
 .saveButton:hover {
   color: rgb(97, 33, 157);
+  box-shadow: 0 0 20px #ffbb00;
+}
+
+.track {
+  color: #ffbb00;
+}
 
 .removeButton {
   width: 30px;
