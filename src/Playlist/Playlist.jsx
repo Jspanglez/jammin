@@ -8,8 +8,11 @@ import { faSpotify } from '@fortawesome/free-brands-svg-icons';
 function Playlist() {
   return (
     <div className={styles.playlistContainer}>
-      <SearchBar placeHolder="Playlist name" className={styles.playlistName}/>
-      <Button text={<>Save to Spotify <FontAwesomeIcon icon={faSpotify} /></>} className={styles.saveButton}/>
+      <SearchBar 
+      placeHolder="Playlist name"
+      value={name}
+      inputHandler={updateSongName}
+      className={styles.playlistName}/>
     </div>
   )
 }
