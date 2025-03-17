@@ -1,5 +1,5 @@
 const clientId = 'dd3007c240d740eab7fb77584a27b52d';
-const redirectUri = 'https://jspanglez.github.io/jammin/callback';
+const redirectUri = 'https://jspanglez.github.io/jammin/';
 let accessToken;
 
 export const Spotify = {
